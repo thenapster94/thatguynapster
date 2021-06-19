@@ -1,30 +1,30 @@
 
-export default function Header() {
+export const Header = ({ currentPage }) => {
 
     return (
         <>
             <header className="header" id="navbar-collapse-toggle">
                 {/* Fixed Navigation Starts */}
                 <ul className="icon-menu d-none d-lg-block revealator-slideup revealator-once revealator-delay1">
-                    <li className="icon-box active">
+                    <li className={`icon-box${currentPage === 'home' ? ' active' : ''}`}>
                         <i className="fa fa-home"></i>
                         <a href="/">
                             <h2>Home</h2>
                         </a>
                     </li>
-                    <li className="icon-box">
+                    <li className={`icon-box${currentPage === 'about' ? ' active' : ''}`}>
                         <i className="fa fa-user"></i>
                         <a href="/about">
                             <h2>About</h2>
                         </a>
                     </li>
-                    <li className="icon-box">
+                    <li className={`icon-box${currentPage === 'portfolio' ? ' active' : ''}`}>
                         <i className="fa fa-briefcase"></i>
                         <a href="/portfolio">
                             <h2>Portfolio</h2>
                         </a>
                     </li>
-                    <li className="icon-box">
+                    <li className={`icon-box${currentPage === 'contact' ? ' active' : ''}`}>
                         <i className="fa fa-envelope-open"></i>
                         <a href="/contact">
                             <h2>Contact</h2>

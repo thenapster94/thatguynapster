@@ -1,0 +1,241 @@
+import Head from 'next/head'
+import Image from 'next/image'
+import { useEffect } from 'react';
+import { Header } from '../components/header';
+import Meta from '../components/meta';
+import PageScripts from '../components/pageScripts';
+
+export default function Home() {
+
+    useEffect(() => {
+        document.querySelector("body").classList.add("about")
+    });
+
+
+    return (
+        <>
+            <Meta />
+
+            <Header currentPage="about" />
+
+            {/* Page Title Starts */}
+            <section className="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
+                <h1>ABOUT <span>ME</span></h1>
+                {/* <span className="title-bg">Resume</span> */}
+            </section>
+            {/* Page Title Ends */}
+
+            {/* <!-- Main Content Starts --> */}
+            <section className="main-content revealator-slideup revealator-once revealator-delay1">
+                <div className="container">
+                    <div className="row">
+                        {/* <!-- Personal Info Starts --> */}
+                        <div className="col-12 col-lg-5 col-xl-6">
+                            <div className="row">
+                                <div className="col-12">
+                                    <h2 className="text-uppercase custom-title mb-0 ft-wt-600">personal info</h2>
+                                </div>
+                                {/* <div className="col-12 d-block d-sm-none">
+                                    <img src="img/img-mobile.jpg" className="img-fluid main-img-mobile" alt="my picture" />
+                                </div> */}
+                                <div className="col-6">
+                                    <ul className="about-list list-unstyled open-sans-font">
+                                        <li>
+                                            <span className="title">first name :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Andrew</span>
+                                        </li>
+                                        <li>
+                                            <span className="title">last name :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Osei-Wusu</span>
+                                        </li>
+                                        <li>
+                                            <span className="title">Nationality :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Ghanaian</span>
+                                        </li>
+                                        <li>
+                                            <span className="title">Freelance :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="col-6">
+                                    <ul className="about-list list-unstyled open-sans-font">
+                                        <li>
+                                            <span className="title">phone :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+233 275 246 704</span>
+                                        </li>
+                                        <li>
+                                            <span className="title">Email :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">andrewosei94@gmail.com</span>
+                                        </li>
+                                        <li>
+                                            <span className="title">Instagram :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
+                                        </li>
+                                        <li>
+                                            <span className="title">Twitter :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div className="col-12 mt-3">
+                                    <a className="button" href="#">
+                                        <span className="button-text">Download CV</span>
+                                        <span className="button-icon fa fa-download"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <!-- Personal Info Ends --> */}
+                        {/* <!-- Boxes Starts --> */}
+                        <div className="col-12 col-lg-7 col-xl-6 my-auto">
+                            <div className="row">
+                                <div className="col-6">
+                                    <div className="box-stats with-margin">
+                                        <h3 className="poppins-font position-relative">6</h3>
+                                        <p className="open-sans-font m-0 position-relative text-uppercase">years of <span className="d-block">experience</span></p>
+                                    </div>
+                                </div>
+                                <div className="col-6">
+                                    <div className="box-stats with-margin">
+                                        <h3 className="poppins-font position-relative">5</h3>
+                                        <p className="open-sans-font m-0 position-relative text-uppercase">completed <span className="d-block">projects</span></p>
+                                    </div>
+                                </div>
+                                {/* <div className="col-6">
+                                    <div className="box-stats">
+                                        <h3 className="poppins-font position-relative">53</h3>
+                                        <p className="open-sans-font m-0 position-relative text-uppercase">awards <span className="d-block">won</span></p>
+                                    </div>
+                                </div> */}
+                            </div>
+                        </div>
+                        {/* <!-- Boxes Ends --> */}
+                    </div>
+                    <hr className="separator" />
+                    {/* <!-- Skills Starts --> */}
+                    <div className="row">
+                        <div className="col-12">
+                            <h3 className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">My Skills</h3>
+                        </div>
+
+                        <div className="col-4">
+                            <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">html</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">javascript</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">css3</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">wordpress</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="col-4">
+                            <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">bootstrap</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">tailwind</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">react</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">nextjs</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="col-4">
+                            <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">wordpress</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">jquery</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">material ui</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">git</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    {/* <!-- Skills Ends --> */}
+                    <hr className="separator" />
+                    {/* <!-- Experience & Education Starts --> */}
+                    <div className="row">
+                        <div className="col-12">
+                            <h3 className="text-uppercase pb-5 mb-0 text-left text-sm-center custom-title ft-wt-600">Experience <span>&</span> Education</h3>
+                        </div>
+                        <div className="col-lg-6 m-15px-tb">
+                            <div className="resume-box">
+                                <ul>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fa fa-briefcase"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2018 - Present</span>
+                                        <h4 className="poppins-font text-uppercase">Web Developer <span className="place open-sans-font">Envato</span></h4>
+                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, </p>
+                                    </li>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fa fa-briefcase"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2013 - 2018</span>
+                                        <h4 className="poppins-font text-uppercase">UI/UX Designer <span className="place open-sans-font">Themeforest</span></h4>
+                                        <p className="open-sans-font">Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt</p>
+                                    </li>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fa fa-briefcase"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2005 - 2013</span>
+                                        <h4 className="poppins-font text-uppercase">Consultant <span className="place open-sans-font">Videohive</span></h4>
+                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="col-lg-6 m-15px-tb">
+                            <div className="resume-box">
+                                <ul>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fa fa-graduation-cap"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2015</span>
+                                        <h4 className="poppins-font text-uppercase">Engineering Degree <span className="place open-sans-font">Oxford University</span></h4>
+                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore</p>
+                                    </li>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fa fa-graduation-cap"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2012</span>
+                                        <h4 className="poppins-font text-uppercase">Master Degree <span className="place open-sans-font">Kiev University</span></h4>
+                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut adipisicing</p>
+                                    </li>
+                                    <li>
+                                        <div className="icon">
+                                            <i className="fa fa-graduation-cap"></i>
+                                        </div>
+                                        <span className="time open-sans-font text-uppercase">2009</span>
+                                        <h4 className="poppins-font text-uppercase">Bachelor Degree <span className="place open-sans-font">Tunis High School</span></h4>
+                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <!-- Experience & Education Ends --> */}
+                </div>
+            </section>
+            {/* <!-- Main Content Ends --> */}
+
+            <PageScripts />
+        </>
+    )
+}

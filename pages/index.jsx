@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect } from 'react';
-import Header from '../components/header';
+import { Header } from '../components/header';
 import Meta from '../components/meta';
 import PageScripts from '../components/pageScripts';
 
@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Meta />
 
-      <Header />
+      <Header currentPage="home" />
 
       <section className="container-fluid main-container container-home p-0 revealator-slideup revealator-once revealator-delay1">
         {/* <div className="color-block d-none d-lg-block"></div> */}
