@@ -30,12 +30,6 @@ export default function Header() {
                             <h2>Contact</h2>
                         </a>
                     </li>
-                    <li className="icon-box">
-                        <i className="fa fa-comments"></i>
-                        <a href="/blog">
-                            <h2>Blog</h2>
-                        </a>
-                    </li>
                 </ul>
                 {/* Fixed Navigation Ends */}
 
