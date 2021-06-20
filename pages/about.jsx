@@ -71,7 +71,7 @@ export default function Home() {
                                     </ul>
                                 </div>
                                 <div className="col-12 mt-3">
-                                    <a className="button" href="#">
+                                    <a className="button" href="/files/andrew-resume.pdf">
                                         <span className="button-text">Download CV</span>
                                         <span className="button-icon fa fa-download"></span>
                                     </a>
@@ -114,16 +114,16 @@ export default function Home() {
                         <div className="col-4">
                             <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">html</span>
-                                </li>
-                                <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">javascript</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">css3</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">nextjs</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">wordpress</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">html</span>
+                                </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">css3</span>
                                 </li>
                             </ul>
                         </div>
@@ -140,7 +140,7 @@ export default function Home() {
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">react</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">nextjs</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">git</span>
                                 </li>
                             </ul>
                         </div>
@@ -151,13 +151,10 @@ export default function Home() {
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">wordpress</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">jquery</span>
-                                </li>
-                                <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">material ui</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">git</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">jquery</span>
                                 </li>
                             </ul>
                         </div>
@@ -177,24 +174,24 @@ export default function Home() {
                                             <i className="fa fa-briefcase"></i>
                                         </div>
                                         <span className="time open-sans-font text-uppercase">2018 - Present</span>
-                                        <h4 className="poppins-font text-uppercase">Web Developer <span className="place open-sans-font">Envato</span></h4>
-                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, </p>
+                                        <h4 className="poppins-font text-uppercase">Web Application Developer <span className="place open-sans-font">roots digital ltd.</span></h4>
+                                        {/* <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit, </p> */}
                                     </li>
                                     <li>
                                         <div className="icon">
                                             <i className="fa fa-briefcase"></i>
                                         </div>
-                                        <span className="time open-sans-font text-uppercase">2013 - 2018</span>
-                                        <h4 className="poppins-font text-uppercase">UI/UX Designer <span className="place open-sans-font">Themeforest</span></h4>
-                                        <p className="open-sans-font">Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt</p>
+                                        <span className="time open-sans-font text-uppercase">2015 - 2017</span>
+                                        <h4 className="poppins-font text-uppercase">web developer<span className="place open-sans-font">trigger pixels</span></h4>
+                                        {/* <p className="open-sans-font">Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt</p> */}
                                     </li>
                                     <li>
                                         <div className="icon">
                                             <i className="fa fa-briefcase"></i>
                                         </div>
-                                        <span className="time open-sans-font text-uppercase">2005 - 2013</span>
-                                        <h4 className="poppins-font text-uppercase">Consultant <span className="place open-sans-font">Videohive</span></h4>
-                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt</p>
+                                        <span className="time open-sans-font text-uppercase">2015</span>
+                                        <h4 className="poppins-font text-uppercase">web developer intern <span className="place open-sans-font">trigger pixels</span></h4>
+                                        {/* <p className="open-sans-font">Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt</p> */}
                                     </li>
                                 </ul>
                             </div>
@@ -206,25 +203,17 @@ export default function Home() {
                                         <div className="icon">
                                             <i className="fa fa-graduation-cap"></i>
                                         </div>
-                                        <span className="time open-sans-font text-uppercase">2015</span>
-                                        <h4 className="poppins-font text-uppercase">Engineering Degree <span className="place open-sans-font">Oxford University</span></h4>
-                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore</p>
+                                        <span className="time open-sans-font text-uppercase">2018</span>
+                                        <h4 className="poppins-font text-uppercase">BSc. computer Engineering<span className="place open-sans-font">Ghana Technology University College</span></h4>
+                                        {/* <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore</p> */}
                                     </li>
                                     <li>
                                         <div className="icon">
                                             <i className="fa fa-graduation-cap"></i>
                                         </div>
-                                        <span className="time open-sans-font text-uppercase">2012</span>
-                                        <h4 className="poppins-font text-uppercase">Master Degree <span className="place open-sans-font">Kiev University</span></h4>
-                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut adipisicing</p>
-                                    </li>
-                                    <li>
-                                        <div className="icon">
-                                            <i className="fa fa-graduation-cap"></i>
-                                        </div>
-                                        <span className="time open-sans-font text-uppercase">2009</span>
-                                        <h4 className="poppins-font text-uppercase">Bachelor Degree <span className="place open-sans-font">Tunis High School</span></h4>
-                                        <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore</p>
+                                        <span className="time open-sans-font text-uppercase">2013</span>
+                                        <h4 className="poppins-font text-uppercase">High School <span className="place open-sans-font">St. Thomas Aquinas</span></h4>
+                                        {/* <p className="open-sans-font">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut adipisicing</p> */}
                                     </li>
                                 </ul>
                             </div>
