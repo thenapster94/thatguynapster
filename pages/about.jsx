@@ -1,11 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Header } from '../components/header';
 import Meta from '../components/meta';
 import PageScripts from '../components/pageScripts';
 
 export default function Home() {
+
+    const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
 
     useEffect(() => {
         document.querySelector("body").classList.add("about")
@@ -41,32 +45,46 @@ export default function Home() {
                                 <div className="col-6">
                                     <ul className="about-list list-unstyled open-sans-font">
                                         <li>
-                                            <span className="title">first name :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Andrew</span>
+                                            <span className="title">first name :</span>
+                                            <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Andrew</span>
                                         </li>
                                         <li>
-                                            <span className="title">last name :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Osei-Wusu</span>
+                                            <span className="title">last name :</span>
+                                            <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Osei-Wusu</span>
                                         </li>
                                         <li>
-                                            <span className="title">Nationality :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Ghanaian</span>
+                                            <span className="title">Nationality :</span>
+                                            <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Ghanaian</span>
                                         </li>
                                         <li>
-                                            <span className="title">Freelance :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span>
+                                            <span className="title">Freelance :</span>
+                                            <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">Available</span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="col-6">
                                     <ul className="about-list list-unstyled open-sans-font">
                                         <li>
-                                            <span className="title">phone :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+233 275 246 704</span>
+                                            <span className="title">phone :</span>
+                                            <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">+233 275 246 704</span>
                                         </li>
                                         <li>
-                                            <span className="title">Email :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">andrewosei94@gmail.com</span>
+                                            <span className="title">Email :</span>
+                                            <Link href="mailto:andrewosei94@gmail.com">
+                                                <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block text-break">andrewosei94@gmail.com</span>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <span className="title">Instagram :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
+                                            <span className="title">Instagram :</span>
+                                            <a className="text-white" href="https://instagram.com/thatguynapster/" target="_blank">
+                                                <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
+                                            </a>
                                         </li>
                                         <li>
-                                            <span className="title">Twitter :</span> <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
+                                            <span className="title">Twitter :</span>
+                                            <a className="text-white" href="https://twitter.com/thatguynapster" target="_blank">
+                                                <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -80,7 +98,7 @@ export default function Home() {
                         </div>
                         {/* <!-- Personal Info Ends --> */}
                         {/* <!-- Boxes Starts --> */}
-                        <div className="col-12 col-lg-7 col-xl-6 my-auto">
+                        <div className={`col-12 col-lg-7 col-xl-6 ${isDesktopOrLaptop ? 'my-auto' : 'mt-5'}`}>
                             <div className="row">
                                 <div className="col-6">
                                     <div className="box-stats with-margin">
