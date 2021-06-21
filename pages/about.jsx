@@ -137,7 +137,7 @@ export default function Home() {
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">tailwind</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">react</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">node js</span>
                                 </li>
                                 <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">git</span>
@@ -152,9 +152,6 @@ export default function Home() {
                                 </li>
                                 <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">typescript</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">node js</span>
                                 </li>
                                 <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">jquery</span>

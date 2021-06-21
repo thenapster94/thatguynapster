@@ -41,11 +41,30 @@ export const Header = ({ currentPage }) => {
                         <span></span>
                         <span></span>
                         <ul className="list-unstyled" id="menu">
-                            <li className="active"><a href="index.html"><i className="fa fa-home"></i><span>Home</span></a></li>
-                            <li><a href="about.html"><i className="fa fa-user"></i><span>About</span></a></li>
-                            <li><a href="portfolio.html"><i className="fa fa-folder-open"></i><span>Portfolio</span></a></li>
-                            <li><a href="contact.html"><i className="fa fa-envelope-open"></i><span>Contact</span></a></li>
-                            <li><a href="blog.html"><i className="fa fa-comments"></i><span>Blog</span></a></li>
+                            <li className={`${currentPage === 'home' ? 'active' : ''}`}>
+                                <a href="/">
+                                    <i className="fa fa-home"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li className={`${currentPage === 'about' ? 'active' : ''}`}>
+                                <a href="/about">
+                                    <i className="fa fa-user"></i>
+                                    <span>About</span>
+                                </a>
+                            </li>
+                            <li className={`${currentPage === 'portfolio' ? 'active' : ''}`}>
+                                <a href="/portfolio">
+                                    <i className="fa fa-folder-open"></i>
+                                    <span>Portfolio</span>
+                                </a>
+                            </li>
+                            <li className={`${currentPage === 'contact' ? 'active' : ''}`}>
+                                <a href="/contact">
+                                    <i className="fa fa-envelope-open"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
