@@ -10,10 +10,11 @@ import PageScripts from '../components/pageScripts';
 export default function Home() {
 
     const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
+    const isTabletOrMobile = useMediaQuery({ maxWidth: 991 });
 
     useEffect(() => {
         document.querySelector("body").classList.add("about")
-    });
+    }, []);
 
 
     return (
@@ -25,7 +26,6 @@ export default function Home() {
             {/* Page Title Starts */}
             <section className="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
                 <h1>ABOUT <span>ME</span></h1>
-                {/* <span className="title-bg">Resume</span> */}
             </section>
             {/* Page Title Ends */}
 
@@ -76,13 +76,13 @@ export default function Home() {
                                         </li>
                                         <li>
                                             <span className="title">Instagram :</span>
-                                            <a className="text-white" href="https://instagram.com/thatguynapster/" target="_blank">
+                                            <a className="text-white" href="https://instagram.com/thatguynapster/" target="_blank" rel="noreferrer">
                                                 <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
                                             </a>
                                         </li>
                                         <li>
                                             <span className="title">Twitter :</span>
-                                            <a className="text-white" href="https://twitter.com/thatguynapster" target="_blank">
+                                            <a className="text-white" href="https://twitter.com/thatguynapster" target="_blank" rel="noreferrer">
                                                 <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">@thatguynapster</span>
                                             </a>
                                         </li>
@@ -98,7 +98,8 @@ export default function Home() {
                         </div>
                         {/* <!-- Personal Info Ends --> */}
                         {/* <!-- Boxes Starts --> */}
-                        <div className={`col-12 col-lg-7 col-xl-6 ${isDesktopOrLaptop ? 'my-auto' : 'mt-5'}`}>
+
+                        <div className={`col-12 col-lg-7 col-xl-6 ${isTabletOrMobile ? 'mt-5' : 'my-auto'}`}>
                             <div className="row">
                                 <div className="col-6">
                                     <div className="box-stats with-margin">
@@ -135,6 +136,9 @@ export default function Home() {
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">javascript</span>
                                 </li>
                                 <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">unity 3d</span>
+                                </li>
+                                <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">nextjs</span>
                                 </li>
                                 <li>
@@ -152,7 +156,7 @@ export default function Home() {
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">bootstrap</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">tailwind</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">typescript</span>
                                 </li>
                                 <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">node js</span>
@@ -160,16 +164,22 @@ export default function Home() {
                                 <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">git</span>
                                 </li>
+                                <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">c#</span>
+                                </li>
                             </ul>
                         </div>
 
                         <div className="col-4">
                             <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
                                 <li>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">logo design</span>
+                                </li>
+                                <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">wordpress</span>
                                 </li>
                                 <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">typescript</span>
+                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">tailwind</span>
                                 </li>
                                 <li>
                                     <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">jquery</span>

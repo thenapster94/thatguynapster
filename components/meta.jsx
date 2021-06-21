@@ -23,6 +23,7 @@ export default function Meta(props) {
                 <link href="css/fm.revealator.jquery.min.css" rel="stylesheet" />
                 <link href="css/style.css" rel="stylesheet" />
                 <link rel="stylesheet" type="text/css" title="red" href="css/yellow-skin.css" />
+                <link rel="stylesheet" type="text/css" href="css/custom.css" />
 
                 <script src="js/modernizr.custom.js"></script>
             </Head>

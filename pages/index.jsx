@@ -26,8 +26,8 @@ export default function Home() {
           <div className="col-12 home-details text-left text-sm-center text-lg-left">
             <div className="col-lg-7 px-0">
               {/* <img src="img/img-mobile.jpg" className="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture" /> */}
-              <h1 className="text-uppercase poppins-font">I'm andrew osei-wusu.<span>web designer</span></h1>
-              <p className="open-sans-font text-white">I'm a Tunisian based web designer & front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
+              <h1 className="text-uppercase poppins-font">I'm andrew osei-wusu.<span>web developer</span></h1>
+              <p className="open-sans-font text-white">I'm a Ghanaian based front‑end developer focused on crafting clean & user‑friendly experiences, I am passionate about building excellent software that improves the lives of those around me.</p>
               <a className="button" href="/about">
                 <span className="button-text">more about me</span>
                 <span className="button-icon fa fa-arrow-right"></span>
