@@ -1,11 +1,17 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Header } from '../components/header';
 import Meta from '../components/meta';
 import PageScripts from '../components/pageScripts';
+
+const OwlCarousel = dynamic(
+    () => import('../components/carousel'),
+    { loading: () => <></>, ssr: false }
+);
 
 export default function Home() {
 
@@ -15,6 +21,8 @@ export default function Home() {
     useEffect(() => {
         document.querySelector("body").classList.add("about")
     }, []);
+
+    const skills = ['javascript', 'unity', 'nextjs', 'html', 'css', 'bootstrap', 'typescript', 'nodejs', 'git', 'csharp', 'wordpress', 'react', 'tailwind', 'jquery']
 
 
     return (
@@ -130,61 +138,38 @@ export default function Home() {
                             <h3 className="text-uppercase pb-4 pb-sm-5 mb-3 mb-sm-0 text-left text-sm-center custom-title ft-wt-600">My Skills</h3>
                         </div>
 
-                        <div className="col-4">
-                            <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">javascript</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">unity 3d</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">nextjs</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">html</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">css3</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col-4">
-                            <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">bootstrap</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">typescript</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">node js</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">git</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">c#</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div className="col-4">
-                            <ul className="about-list list-unstyled open-sans-font text-center text-uppercase">
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">logo design</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">wordpress</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">tailwind</span>
-                                </li>
-                                <li>
-                                    <span className="value d-block d-sm-inline-block d-lg-block d-xl-inline-block">jquery</span>
-                                </li>
-                            </ul>
+                        <div className="col-12">
+                            <OwlCarousel
+                                name='carousel_2'
+                                showDots={true}
+                                autoplay={false}
+                                autoplayTimeout={3000}
+                                loop={true}
+                                responsive={
+                                    {
+                                        0: {
+                                            items: 3
+                                        },
+                                        768: {
+                                            items: 6
+                                        },
+                                        991: {
+                                            items: 7
+                                        },
+                                        1366: {
+                                            items: 9
+                                        }
+                                    }
+                                }
+                            >
+                                {
+                                    skills.map((_skill, i) => {
+                                        return (
+                                            <img className="rounded" src={`/img/tech/${_skill}.png`} alt={_skill} />
+                                        )
+                                    })
+                                }
+                            </OwlCarousel>
                         </div>
                     </div>
                     {/* <!-- Skills Ends --> */}
