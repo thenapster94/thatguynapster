@@ -17,18 +17,24 @@ export default function Home() {
 
     const projects = [
         {
-            name: 'Project 1',
-            preview: '/img/projects/project-1.jpg',
-            link: 'https://google.com/',
-            client: 'Me',
-            tools: ['html', 'css', 'javascript', 'jquery', 'nextjs', 'nodejs']
+            name: 'swoove',
+            preview: '/img/projects/swoove.jpg',
+            link: 'https://swoove.delivery',
+            client: 'Roots Digital',
+            tools: ['nextjs', 'bootstrap','nodejs']
         }, {
-            name: 'Project 2',
-            preview: '/img/projects/project-2.jpg',
-            link: 'https://google.com/',
-            client: 'Me',
-            tools: ['html', 'typescript', 'tailwind', 'nextjs', 'nodejs']
-        }
+            name: 'curiashops',
+            preview: '/img/projects/curiashops.jpg',
+            link: 'https://curishops.com/',
+            client: 'Roots Digital',
+            tools: ['nextjs', 'bootstrap']
+        }, {
+            name: 'ananse hub',
+            preview: '/img/projects/ananse.jpg',
+            link: 'https://ananssehub.com/',
+            client: 'Roots Digital',
+            tools: ['nextjs', 'typescript', 'tailwind']
+        },
     ]
 
     const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
@@ -79,7 +85,7 @@ export default function Home() {
                                                 <div className="row mx-0">
                                                     {_proj.tools.map((_tool, i) => {
                                                         return (
-                                                            <div className="col-lg-4 col-2 mb-3" key={i}>
+                                                            <div className="col-lg-4 col-2 mb-3 mx-auto" key={i}>
                                                                 <img src={`/img/tech/${_tool}.png`} alt={_tool} />
                                                             </div>
                                                         )
@@ -89,7 +95,6 @@ export default function Home() {
                                             <div className="col-lg-6 mx-auto portfolio-item">
                                                 <div className="card-body">
                                                     <h5 className="portfolio-title">{_proj.name}</h5>
-
                                                     <img className="card-img-top" src={_proj.preview} alt="project 1" />
                                                 </div>
                                             </div>
