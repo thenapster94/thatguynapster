@@ -13,7 +13,7 @@ const OwlCarousel = dynamic(
     { loading: () => <></>, ssr: false }
 );
 
-export default function Home() {
+export default function About() {
 
     const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
     const isTabletOrMobile = useMediaQuery({ maxWidth: 991 });
@@ -165,7 +165,7 @@ export default function Home() {
                                 {
                                     skills.map((_skill, i) => {
                                         return (
-                                            <img className="rounded" src={`/img/tech/${_skill}.png`} alt={_skill} />
+                                            <img className="rounded" src={`/img/tech/${_skill}.png`} alt={_skill} key={i} />
                                         )
                                     })
                                 }

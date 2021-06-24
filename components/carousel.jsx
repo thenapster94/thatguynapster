@@ -11,7 +11,6 @@ export default function Carousel({
     autoplayTimeout,
     children }) {
     useEffect(() => {
-        console.log('render carousel');
         window.jQuery = require('../public/vendor/jquery/jquery.min.js');
         window.Carousel = require('../public/vendor/owl-carousel/owl.carousel.js');
 
@@ -27,7 +26,6 @@ export default function Carousel({
                     ..._obj
                 }
             });
-        console.log(responsive_points);
 
 
         window.jQuery(`#${name}`).owlCarousel({

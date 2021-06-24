@@ -13,7 +13,7 @@ const OwlCarousel = dynamic(
     { loading: () => <></>, ssr: false }
 );
 
-export default function Home() {
+export default function Portfolio() {
 
     const projects = [
         {
