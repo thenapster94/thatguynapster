@@ -14,7 +14,7 @@ export default function Home() {
 
   return (
     <>
-      <Meta />
+      <Meta canonical={`${process.env.NEXT_PUBLIC_BASE_URL}portfolio`} />
 
       <Header currentPage="home" />
 

@@ -5,7 +5,7 @@ import Head from 'next/head';
 
 import { Config } from '../configs/global_variables';
 
-export default function Meta(props) {
+export default function Meta({ canonical }) {
     return (
         <>
             <Head>
@@ -30,7 +30,7 @@ export default function Meta(props) {
             <NextSeo
                 title={Config.title}
                 description={Config.description}
-                canonical={Config.canonical || process.env.NEXT_PUBLIC_BASE_URL}
+                canonical={canonical || process.env.NEXT_PUBLIC_BASE_URL}
                 openGraph={{
                     title: Config.title,
                     description: Config.description,

@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Header } from '../components/header';
 import Meta from '../components/meta';
 import PageScripts from '../components/pageScripts';
+import { openInNewTab } from '../utils/functions';
 
 const OwlCarousel = dynamic(
     () => import('../components/carousel'),
@@ -19,9 +20,9 @@ export default function Portfolio() {
         {
             name: 'swoove',
             preview: '/img/projects/swoove.jpg',
-            link: 'https://swoove.delivery',
+            link: 'https://panel.swoovedelivery.com/',
             client: 'Roots Digital',
-            tools: ['nextjs', 'bootstrap','nodejs']
+            tools: ['nextjs', 'bootstrap', 'nodejs']
         }, {
             name: 'curiashops',
             preview: '/img/projects/curiashops.jpg',
@@ -31,10 +32,16 @@ export default function Portfolio() {
         }, {
             name: 'ananse hub',
             preview: '/img/projects/ananse.jpg',
-            link: 'https://ananssehub.com/',
+            link: 'https://anansehub.com/',
             client: 'Roots Digital',
             tools: ['nextjs', 'typescript', 'tailwind']
-        },
+        }, {
+            name: 'spa',
+            preview: '/img/projects/spa.jpg',
+            link: 'https://senams-spa-dev.vercel.app/',
+            client: 'Personal',
+            tools: ['nextjs', 'bootstrap']
+        }
     ]
 
     const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
@@ -46,7 +53,7 @@ export default function Portfolio() {
 
     return (
         <>
-            <Meta />
+            <Meta canonical={`${process.env.NEXT_PUBLIC_BASE_URL}portfolio`} />
 
             <Header currentPage="portfolio" />
 
@@ -95,7 +102,7 @@ export default function Portfolio() {
                                             <div className="col-lg-6 mx-auto portfolio-item">
                                                 <div className="card-body">
                                                     <h5 className="portfolio-title">{_proj.name}</h5>
-                                                    <img className="card-img-top" src={_proj.preview} alt="project 1" />
+                                                    <img className="card-img-top" src={_proj.preview} alt="project 1" onClick={() => { openInNewTab(_proj.link) }} />
                                                 </div>
                                             </div>
                                             <div className="pl-3 col-lg-3 my-auto text-break">

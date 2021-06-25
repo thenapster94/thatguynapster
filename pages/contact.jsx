@@ -19,7 +19,7 @@ export default function Contact() {
 
     return (
         <>
-            <Meta />
+            <Meta canonical={`${process.env.NEXT_PUBLIC_BASE_URL}portfolio`} />
 
             <Header currentPage="contact" />
 
@@ -36,7 +36,7 @@ export default function Contact() {
                 <div className="container">
                     <div className="row">
                         {/* <!-- Left Side Starts --> */}
-                        <div className="col-12 col-lg-4">
+                        <div className="col-12 col-lg-4 mx-lg-auto text-lg-center">
                             <h3 className="text-uppercase custom-title mb-0 ft-wt-600 pb-3">hit me up</h3>
                             <p className="open-sans-font mb-3">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities. I want to be part of your dream and vision; if they scare me enough 😅.</p>
 
@@ -70,7 +70,7 @@ export default function Contact() {
                         </div>
                         {/* <!-- Left Side Ends --> */}
                         {/* <!-- Contact Form Starts --> */}
-                        <div className="col-12 col-lg-8">
+                        {/* <div className="col-12 col-lg-8">
                             <form className="contactform" method="post">
                                 <div className="contactform">
                                     <div className="row">
@@ -96,7 +96,7 @@ export default function Contact() {
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div> */}
                         {/* <!-- Contact Form Ends --> */}
                     </div>
                 </div>
