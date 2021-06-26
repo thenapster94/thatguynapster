@@ -70,10 +70,10 @@ export default function Portfolio() {
                 <div className="row mx-0 h-100 align-items-center">
                     <div className="col-10 px-0 mx-auto">
                         <OwlCarousel
-                            name='carousel_2'
+                            name='portfolio_carousel'
                             showDots={true}
-                            autoplay={false}
-                            autoplayTimeout={3000}
+                            autoplay={true}
+                            autoplayTimeout={5000}
                             loop={true}
                             responsive={
                                 {
@@ -82,7 +82,6 @@ export default function Portfolio() {
                                     },
                                 }
                             }
-                        // customDots={'custom-dots'}
                         >
                             {
                                 projects.map((_proj, i) => {

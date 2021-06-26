@@ -111,13 +111,13 @@ export default function About() {
                             <div className="row">
                                 <div className="col-6">
                                     <div className="box-stats with-margin">
-                                        <h3 className="poppins-font position-relative">6</h3>
+                                        <h3 className="poppins-font position-relative">5</h3>
                                         <p className="open-sans-font m-0 position-relative text-uppercase">years of <span className="d-block">experience</span></p>
                                     </div>
                                 </div>
                                 <div className="col-6">
                                     <div className="box-stats with-margin">
-                                        <h3 className="poppins-font position-relative">5</h3>
+                                        <h3 className="poppins-font position-relative">3</h3>
                                         <p className="open-sans-font m-0 position-relative text-uppercase">completed <span className="d-block">projects</span></p>
                                     </div>
                                 </div>
