@@ -19,7 +19,7 @@ export default function Contact() {
 
     return (
         <>
-            <Meta canonical={`${process.env.NEXT_PUBLIC_BASE_URL}portfolio`} />
+            <Meta canonical={`${process.env.NEXT_PUBLIC_BASE_URL}contact`} />
 
             <Header currentPage="contact" />
 
@@ -62,7 +62,7 @@ export default function Contact() {
                                     </a>
                                 </li>
                                 <li>
-                                    <a title="LinkedIn" href="#">
+                                    <a title="LinkedIn" href="https://www.linkedin.com/in/andrew-o-w/">
                                         <i className="fa fa-linkedin"></i>
                                     </a>
                                 </li>
