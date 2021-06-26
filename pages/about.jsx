@@ -165,7 +165,14 @@ export default function About() {
                                 {
                                     skills.map((_skill, i) => {
                                         return (
-                                            <img className="rounded" src={`/img/tech/${_skill}.png`} alt={_skill} key={i} />
+                                            <Image
+                                                key={i}
+                                                className="img-fluid"
+                                                alt={_skill}
+                                                src={`/img/tech/${_skill}.png`}
+                                                width={512}
+                                                height={512}
+                                            />
                                         )
                                     })
                                 }

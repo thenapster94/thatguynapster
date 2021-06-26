@@ -9,6 +9,7 @@ export default function Carousel({
     autoplay,
     loop,
     autoplayTimeout,
+    autoplaySpeed,
     children }) {
     useEffect(() => {
         window.jQuery = require('../public/vendor/jquery/jquery.min.js');
@@ -28,15 +29,15 @@ export default function Carousel({
             });
 
 
-        window.jQuery(`#${name}`).owlCarousel({
+        let owl = window.jQuery(`#${name}`);
+        owl.owlCarousel({
             margin: 15,
             dots: showDots,
             nav: showNavs,
             autoplay: autoplay,
             loop: loop,
             autoplayTimeout: autoplayTimeout,
-            animateIn: 'fadeIn',
-            animateOut: 'fadeOut',
+            autoplaySpeed: autoplaySpeed,
             responsive: responsive ? responsive_points :
                 {
                     0: {
@@ -56,19 +57,26 @@ export default function Carousel({
                     }
                 }
         });
+
         window.jQuery('.owl-dots').addClass('mt-0');
+        console.log(document.getElementsByClassName('owl-dot'));
+        let owl_buttons = document.getElementsByClassName('owl-dot');
+        for (let _btn of owl_buttons) {
+            _btn.setAttribute('aria-label', 'Carousel Button');
+            console.log(_btn);
+        }
 
         //handle custom navigations
         customNavs && (
             //go to previous slide
             window.jQuery(`#${customNavs.previous}`).on('click', function () {
-                window.jQuery(`#${name}`).trigger('prev.owl.carousel');
-            }),
+                owl.trigger('prev.owl.carousel');
+            }, false),
 
             //go to next slide
             window.jQuery(`#${customNavs.next}`).on('click', function () {
-                window.jQuery(`#${name}`).trigger('next.owl.carousel');
-            })
+                owl.trigger('next.owl.carousel');
+            }, false)
         )
         //END handle custom navigations
     }, [children]);

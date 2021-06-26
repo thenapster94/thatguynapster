@@ -26,7 +26,7 @@ export default function Portfolio() {
         }, {
             name: 'curiashops',
             preview: '/img/projects/curiashops.jpg',
-            link: 'https://curishops.com/',
+            link: 'https://curiashops.com/login',
             client: 'Roots Digital',
             tools: ['nextjs', 'bootstrap']
         }, {
@@ -74,6 +74,7 @@ export default function Portfolio() {
                             showDots={true}
                             autoplay={true}
                             autoplayTimeout={5000}
+                            autoplaySpeed={1000}
                             loop={true}
                             responsive={
                                 {
@@ -92,7 +93,13 @@ export default function Portfolio() {
                                                     {_proj.tools.map((_tool, i) => {
                                                         return (
                                                             <div className="col-lg-4 col-2 mb-3 mx-auto" key={i}>
-                                                                <img src={`/img/tech/${_tool}.png`} alt={_tool} />
+                                                                <Image
+                                                                    className="img-fluid"
+                                                                    alt={_tool}
+                                                                    src={`/img/tech/${_tool}.png`}
+                                                                    width={512}
+                                                                    height={512}
+                                                                />
                                                             </div>
                                                         )
                                                     })}
@@ -100,8 +107,15 @@ export default function Portfolio() {
                                             </div>
                                             <div className="col-lg-6 mx-auto portfolio-item">
                                                 <div className="card-body">
-                                                    <h5 className="portfolio-title">{_proj.name}</h5>
-                                                    <img className="card-img-top" src={_proj.preview} alt="project 1" onClick={() => { openInNewTab(_proj.link) }} />
+                                                    <h2 className="portfolio-title">{_proj.name}</h2>
+                                                    <Image
+                                                        className="img-fluid"
+                                                        alt={_proj.name}
+                                                        src={_proj.preview}
+                                                        width={1920}
+                                                        height={937}
+                                                        onClick={() => { openInNewTab(_proj.link) }}
+                                                    />
                                                 </div>
                                             </div>
                                             <div className="pl-3 col-lg-3 my-auto text-break">
