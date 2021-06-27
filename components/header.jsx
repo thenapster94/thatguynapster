@@ -36,7 +36,8 @@ export const Header = ({ currentPage }) => {
                 {/* Mobile Menu Starts */}
                 <nav role="navigation" className="d-block d-lg-none">
                     <div id="menuToggle">
-                        <input type="checkbox" />
+                        <input type="checkbox" id="toggleInput" />
+                        <label className="sr-only" htmlFor="toggleInput">toggle label</label>
                         <span></span>
                         <span></span>
                         <span></span>
