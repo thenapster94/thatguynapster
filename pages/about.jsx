@@ -28,7 +28,7 @@ export default function About() {
 
     useEffect(() => {
         document.querySelector("body").classList.add("about");
-        
+
         console.log(window.innerWidth);
         if (window.innerWidth < 992) {
             setIsDesktop(false);
@@ -119,7 +119,7 @@ export default function About() {
                         </div>
                         {/* <!-- Personal Info Ends --> */}
                         {/* <!-- Boxes Starts --> */}
-                        <div className={`col-12 col-lg-7 col-xl-6 ${isDesktop ? 'my-auto' : 'mt-5'}`}>
+                        <div className={`col-12 col-lg-7 col-xl-6 mt-5`}>
                             <div className="row">
                                 <div className="col-6">
                                     <div className="box-stats with-margin">
@@ -145,7 +145,7 @@ export default function About() {
                         </div>
 
                         <div className="col-12">
-                            <OwlCarousel
+                            {/* <OwlCarousel
                                 name='carousel_2'
                                 showDots={true}
                                 autoplay={false}
@@ -181,24 +181,10 @@ export default function About() {
                                         )
                                     })
                                 }
-                            </OwlCarousel>
-                            {/* <Swiper
+                            </OwlCarousel> */}
+                            <Swiper
                                 spaceBetween={20}
-                                slidesPerView={isDesktop ? 9 : 3}
-                                // breakpoints={{
-                                //     "576": {
-                                //         "slidesPerView": 3
-                                //     },
-                                //     "768": {
-                                //         "slidesPerView": 4
-                                //     },
-                                //     "992": {
-                                //         "slidesPerView": 6
-                                //     },
-                                //     "1280": {
-                                //         "slidesPerView": 9
-                                //     }
-                                // }}
+                                slidesPerView={isDesktop ? 9.5 : 3.5}
                                 loop={true}
                             >
                                 {
@@ -207,7 +193,7 @@ export default function About() {
                                             <SwiperSlide key={i}>
                                                 <Image
                                                     className="img-fluid"
-                                                    // alt={_skill}
+                                                    alt={`Image for ${_skill}`}
                                                     src={`/img/tech/${_skill}.png`}
                                                     width={512}
                                                     height={512}
@@ -216,7 +202,7 @@ export default function About() {
                                         )
                                     })
                                 }
-                            </Swiper> */}
+                            </Swiper>
                         </div>
                     </div>
                     {/* <!-- Skills Ends --> */}
