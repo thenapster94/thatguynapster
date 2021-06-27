@@ -2,8 +2,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { useEffect } from 'react';
-import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
+import MediaQuery, { useMediaQuery } from 'react-responsive';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, {
+    Pagination, Navigation
+} from 'swiper/core';
+
+SwiperCore.use([Pagination, Navigation]);
+
 import { Header } from '../components/header';
 import Meta from '../components/meta';
 import PageScripts from '../components/pageScripts';
@@ -17,9 +24,15 @@ export default function About() {
 
     const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
     const isTabletOrMobile = useMediaQuery({ maxWidth: 991 });
+    const [isDesktop, setIsDesktop] = useState(true);
 
     useEffect(() => {
-        document.querySelector("body").classList.add("about")
+        document.querySelector("body").classList.add("about");
+        
+        console.log(window.innerWidth);
+        if (window.innerWidth < 992) {
+            setIsDesktop(false);
+        }
     }, []);
 
     const skills = ['javascript', 'unity', 'nextjs', 'html', 'css', 'bootstrap', 'typescript', 'nodejs', 'git', 'csharp', 'wordpress', 'react', 'tailwind', 'jquery']
@@ -106,8 +119,7 @@ export default function About() {
                         </div>
                         {/* <!-- Personal Info Ends --> */}
                         {/* <!-- Boxes Starts --> */}
-
-                        <div className={`col-12 col-lg-7 col-xl-6 ${isTabletOrMobile ? 'mt-5' : 'my-auto'}`}>
+                        <div className={`col-12 col-lg-7 col-xl-6 ${isDesktop ? 'my-auto' : 'mt-5'}`}>
                             <div className="row">
                                 <div className="col-6">
                                     <div className="box-stats with-margin">
@@ -121,12 +133,6 @@ export default function About() {
                                         <p className="open-sans-font m-0 position-relative text-uppercase">completed <span className="d-block">projects</span></p>
                                     </div>
                                 </div>
-                                {/* <div className="col-6">
-                                    <div className="box-stats">
-                                        <h3 className="poppins-font position-relative">53</h3>
-                                        <p className="open-sans-font m-0 position-relative text-uppercase">awards <span className="d-block">won</span></p>
-                                    </div>
-                                </div> */}
                             </div>
                         </div>
                         {/* <!-- Boxes Ends --> */}
@@ -144,7 +150,6 @@ export default function About() {
                                 showDots={true}
                                 autoplay={false}
                                 autoplayTimeout={3000}
-                                loop={true}
                                 responsive={
                                     {
                                         0: {
@@ -177,6 +182,41 @@ export default function About() {
                                     })
                                 }
                             </OwlCarousel>
+                            {/* <Swiper
+                                spaceBetween={20}
+                                slidesPerView={isDesktop ? 9 : 3}
+                                // breakpoints={{
+                                //     "576": {
+                                //         "slidesPerView": 3
+                                //     },
+                                //     "768": {
+                                //         "slidesPerView": 4
+                                //     },
+                                //     "992": {
+                                //         "slidesPerView": 6
+                                //     },
+                                //     "1280": {
+                                //         "slidesPerView": 9
+                                //     }
+                                // }}
+                                loop={true}
+                            >
+                                {
+                                    skills.map((_skill, i) => {
+                                        return (
+                                            <SwiperSlide key={i}>
+                                                <Image
+                                                    className="img-fluid"
+                                                    // alt={_skill}
+                                                    src={`/img/tech/${_skill}.png`}
+                                                    width={512}
+                                                    height={512}
+                                                />
+                                            </SwiperSlide>
+                                        )
+                                    })
+                                }
+                            </Swiper> */}
                         </div>
                     </div>
                     {/* <!-- Skills Ends --> */}
