@@ -1,34 +1,124 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Tailwind Typescript Boilerplate
+
+This repository contains the boilerplate code for setting up a nextjs project with tailwind and typescript.
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Before we get started, we're going to need to make sure we have a few things installed and available on our machine.
+
+#### Node >= 12
+
+##### MacOS
 
 ```bash
-npm run dev
-# or
+curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+```
+
+##### Other
+
+See the installation guides available @ nodejs.org:
+
+https://nodejs.org/en/download/package-manager/
+
+#### Yarn
+
+```bash
+npm i -g yarn
+```
+
+### Installing
+
+Below is a series of step by step instructions that tell you how to get a development env running.
+
+Create a local clone of the repository
+
+```bash
+git clone https://Napster94@bitbucket.org/Napster94/nextjs-tailwind-typescript-boilerplate.git
+```
+
+Enter the cloned repositories' directory
+
+```bash
+cd nextjs-tailwind-typescript-boilerplate
+```
+
+Install the projects dependencies
+
+```bash
+yarn
+```
+
+Create a `.env` file based on the [.env.example template](.env.example)
+
+Start the projects development server
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project should now be available at http://localhost:4800
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Environment Variables
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+These are the environment variables required to successfully deploy the application.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Repository Variables
 
-## Learn More
+| key                        | description                 |
+| -------------------------- | --------------------------- |
+| NEXT_PUBLIC_BASE_URL       | The base url for API routes |
+| NEXT_PUBLIC_GOOGLE_API_KEY | Google services API key     |
 
-To learn more about Next.js, take a look at the following resources:
+## Built With
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Details of the tech stack that has been used.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [NextJS](https://nextjs.org/) - Client Framework
+- [Tailwind](https://nextjs.org/) - CSS Framework
+- [Typescript](https://nextjs.org/) - Development Language
 
-## Deploy on Vercel
+## Architecture
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A basic architecture diagram or description of the chosen architecture should be detailed here.
+[Coming Soon!]
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Authors
+
+- **Napster** <andrewosei94@gmail.com>
+- **Albert Akrong** <albert@rootsdigital.tech>
+- **Robert Quainoo** <robert@rootsdigital.tech>
+
+## Licenses
+
+Place the result of `npx license-checker --summary` here
+
+```
+├─ MIT: 1072
+├─ ISC: 61
+├─ BSD-3-Clause: 35
+├─ Apache-2.0: 28
+├─ BSD-2-Clause: 22
+├─ (MIT OR CC0-1.0): 5
+├─ CC-BY-4.0: 2
+├─ CC0-1.0: 2
+├─ (MIT OR Apache-2.0): 1
+├─ BSD*: 1
+├─ Apache*: 1
+├─ MIT OR GPL-2.0-or-later: 1
+├─ AFLv2.1,BSD: 1
+├─ WTFPL: 1
+├─ (MIT AND Zlib): 1
+├─ (WTFPL OR MIT): 1
+├─ (MIT AND BSD-3-Clause): 1
+├─ CC-BY-3.0: 1
+├─ 0BSD: 1
+└─ Unlicense: 1
+```
+
+## Troubleshooting
+
+Below are a few common issues users experience - including an overview of their possible cause and solutions.
