@@ -36,6 +36,12 @@ export default function Portfolio() {
             client: 'Roots Digital',
             tools: ['nextjs', 'typescript', 'tailwind']
         }, {
+            name: 'drifan',
+            preview: '/img/projects/drifan.jpg',
+            link: 'https://drifan.net/',
+            client: 'Drifan',
+            tools: ['nextjs', 'tailwind', 'typescript']
+        }, {
             name: 'spa',
             preview: '/img/projects/spa.jpg',
             link: 'https://senams-spa-dev.vercel.app/',
@@ -53,6 +59,13 @@ export default function Portfolio() {
 
     return (
         <>
+            <Head>
+                <link rel="preload" as="image" href="/img/projects/swoove.jpg" />
+                <link rel="preload" as="image" href="/img/projects/curiashops.jpg" />
+                <link rel="preload" as="image" href="/img/projects/ananse.jpg" />
+                <link rel="preload" as="image" href="/img/projects/drifan.jpg" />
+                <link rel="preload" as="image" href="/img/projects/spa.jpg" />
+            </Head>
             <Meta canonical={`${process.env.NEXT_PUBLIC_BASE_URL}portfolio`} />
 
             <Header currentPage="portfolio" />
