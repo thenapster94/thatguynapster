@@ -1,9 +1,9 @@
-export { }
+export {};
 
-export const Config = {
-  site_name: 'ThatGuyNapster',
-  title: 'Andrew Osei | @thatguynapster',
-  description: 'Portfolio website for Andrew Osei (@thatguynapster)',
-  locale: 'en',
-  canonical: ''
+export const config = {
+  site_name: "ThatGuyNapster",
+  title: "Andrew Osei-Wusu | @thatguynapster",
+  description: "Portfolio website for Andrew Osei-Wusu (@thatguynapster)",
+  locale: "en",
+  canonical: "",
 };
