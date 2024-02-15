@@ -28,8 +28,13 @@ export default function Home() {
         </div>
 
         <div className="flex gap-4">
-          {socials.map(({ link, icon }, i) => (
-            <Link key={i} href={link} className="w-8 rounded-full bg-gray">
+          {socials.map(({ link, icon, ariaLabel }, i) => (
+            <Link
+              key={i}
+              aria-label={ariaLabel}
+              href={link}
+              className="w-8 rounded-full bg-gray"
+            >
               <div className="p-1.5 text-black">{icon}</div>
             </Link>
           ))}
