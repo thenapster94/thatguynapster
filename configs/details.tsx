@@ -15,7 +15,7 @@ export const country = "Ghana";
 export const links = [
   {
     text: "home",
-    url: "#",
+    url: "#home",
   },
   {
     text: "about",
@@ -39,12 +39,8 @@ export const logo = null;
 
 export const socials = [
   {
-    icon: <EnvelopeIcon className="w-4 h-4" />,
-    link: "mailto:andrewosei94@gmail.com",
-  },
-  {
-    icon: <PhoneIcon className="w-4 h-4" />,
-    link: "tel:233275246704",
+    icon: <GithubIcon className="w-4 h-4" />,
+    link: "https://github.com/thatguynapster",
   },
   {
     icon: <TwitterIcon className="w-4 h-4" />,
@@ -59,7 +55,11 @@ export const socials = [
     link: "https://www.linkedin.com/in/andrew-o-w/",
   },
   {
-    icon: <GithubIcon className="w-4 h-4" />,
-    link: "https://github.com/thatguynapster",
+    icon: <EnvelopeIcon className="w-4 h-4" />,
+    link: "mailto:andrewosei94@gmail.com",
+  },
+  {
+    icon: <PhoneIcon className="w-4 h-4" />,
+    link: "tel:233275246704",
   },
 ];

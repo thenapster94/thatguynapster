@@ -1,13 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { links } from "@/configs/details";
 import { classNames, scrollToDiv } from "@/libs";
+import { useParams } from "next/navigation";
 
 const Navbar = () => {
+  const params = useParams();
+
   const [activeLink, setActiveLink] = useState<string>("home");
+
+  useEffect(() => {
+    const section = window.location.hash;
+    setActiveLink(
+      section.split("#")[1]?.length ? section.split("#")[1] : "home"
+    );
+    scrollToDiv(section.split("#")[1]?.length ? section.split("#")[1] : "home");
+  }, [params]);
 
   return (
     <header className="sticky top-0 md:px-24 pt-2 glass mix-blend-difference">
@@ -58,7 +69,10 @@ const NavItem = ({
     >
       <Link
         href={url}
-        className={classNames(active ? "text-accent" : "text-white")}
+        className={classNames(
+          active ? "text-accent" : "text-white",
+          "scroll-smooth"
+        )}
       >
         {text}
       </Link>

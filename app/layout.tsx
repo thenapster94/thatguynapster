@@ -20,7 +20,7 @@ export default function RootLayout({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       <body
-        className={`${spartan.className} bg-[url('/img/page-background.webp')] bg-cover bg-top sm:bg-top bg-no-repeat`}
+        className={`${spartan.className} bg-[url('/img/page-background.webp')] bg-cover md:bg-contain bg-top sm:bg-top bg-no-repeat`}
       >
         {children}
       </body>

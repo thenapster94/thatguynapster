@@ -18,9 +18,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  scroll-behavior: smooth;
 }
 
 @layer utilities {
