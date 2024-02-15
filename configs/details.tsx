@@ -41,7 +41,7 @@ export const socials = [
   {
     icon: <GithubIcon className="w-4 h-4" />,
     link: "https://github.com/thatguynapster",
-    ariaLabel: "",
+    ariaLabel: "Github",
   },
   {
     icon: <TwitterIcon className="w-4 h-4" />,
