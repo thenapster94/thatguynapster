@@ -68,6 +68,51 @@ body {
   -webkit-text-stroke: 1.5px white;
 }
 
+.text-outline-thin {
+  -webkit-text-stroke-width: 0.2px;
+}
+
 .text-outline-black {
   -webkit-text-stroke: 0.75px black;
+}
+
+.slant-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.slant-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+.hex-grid {
+  display: flex;
+  --s: 80px;
+  --m: 24px;
+  --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+}
+
+.hex-grid__container {
+  font-size: 0;
+}
+
+.hex-grid__container div {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
+  /* background: red; */
+  margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+}
+
+.hex-grid__container::before {
+  content: "";
+  width: calc(var(--s) / 2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(var(--f) - 3px),
+    #000 0 var(--f)
+  );
 }

@@ -69,3 +69,50 @@ export const socials = [
     ariaLabel: "Phone number",
   },
 ];
+
+export const skills = [
+  {
+    name: "CSS",
+    image: "/img/tech/css.png",
+  },
+  {
+    name: "Git",
+    image: "/img/tech/git.png",
+  },
+  {
+    name: "HTML",
+    image: "/img/tech/html.png",
+  },
+  {
+    name: "JavaScript",
+    image: "/img/tech/javascript.png",
+  },
+  {
+    name: "jQuery",
+    image: "/img/tech/jquery.png",
+  },
+  {
+    name: "Next.js",
+    image: "/img/tech/nextjs.png",
+  },
+  {
+    name: "node.js",
+    image: "/img/tech/nodejs.png",
+  },
+  {
+    name: "React",
+    image: "/img/tech/react.png",
+  },
+  {
+    name: "TailwindCSS",
+    image: "/img/tech/tailwind.png",
+  },
+  {
+    name: "TypeScript",
+    image: "/img/tech/typeScript.png",
+  },
+  {
+    name: "Wordpress",
+    image: "/img/tech/wordpress.png",
+  },
+];

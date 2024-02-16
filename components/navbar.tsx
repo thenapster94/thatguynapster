@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-
-import { links } from "@/configs/details";
-import { classNames, scrollToDiv } from "@/libs";
 import { useParams } from "next/navigation";
+import Link from "next/link";
+
+import { classNames, scrollToDiv } from "@/libs";
+import { links } from "@/configs";
 
 const Navbar = () => {
   const params = useParams();
@@ -21,8 +21,8 @@ const Navbar = () => {
   }, [params]);
 
   return (
-    <header className="sticky top-0 md:px-24 pt-2 glass mix-blend-difference">
-      <nav className="hidden md:flex gap-16 items-center">
+    <header className="hidden lg:block sticky top-0 lg:px-24 pt-2 glass mix-blend- z-50">
+      <nav className="flex gap-16 items-center">
         {links.map((link, i) => (
           <NavItem
             key={i}
