@@ -32,30 +32,6 @@ body {
   }
 }
 
-.hero-splatter:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url(/img/splatter.png) 0 no-repeat;
-  overflow: hidden;
-}
-
-.about-splatter:before {
-  content: "";
-  position: absolute;
-  width: 75%;
-  height: 100%;
-  top: 65%;
-  left: -29.5%;
-  z-index: -1;
-  background: url(/img/splatter.png) 0 0 no-repeat;
-  transform: rotate(21.995deg);
-  background-size: contain;
-  overflow: hidden;
-}
-
 .glass {
   /* From https://css.glass */
   background: rgba(0, 0, 0, 0.5);
@@ -86,7 +62,7 @@ body {
 
 .hex-grid {
   display: flex;
-  --s: 80px;
+  --s: 100px;
   --m: 24px;
   --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
 }
