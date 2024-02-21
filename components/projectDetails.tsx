@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectDetails = ({ project }: { project: any }) => {
+export const ProjectDetails = ({ project }: { project: any }) => {
   return (
     <>
       <h3 className="text-accent text-2xl font-semibold capitalize">
@@ -10,8 +10,11 @@ const ProjectDetails = ({ project }: { project: any }) => {
         {project.description}
       </p>
       <div className="flex gap-4">
-        {project.skills.map((skill: string) => (
-          <span className="py-2 px-3 bg-gray w-max justify-center items-center rounded-md">
+        {project.skills.map((skill: string, i: number) => (
+          <span
+            key={i}
+            className="py-2 px-3 bg-gray w-max justify-center items-center rounded-md"
+          >
             {skill}
           </span>
         ))}
@@ -26,5 +29,3 @@ const ProjectDetails = ({ project }: { project: any }) => {
     </>
   );
 };
-
-export default ProjectDetails;

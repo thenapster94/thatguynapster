@@ -1,7 +1,2 @@
-export const scrollToDiv = (element: string) => {
-  document.getElementById(element)?.scrollIntoView();
-};
-
-export const classNames = (...classes: any) => {
-  return classes.filter(Boolean).join(" ");
-};
+export * from "./helpers";
+export * as schema from "./schema";
