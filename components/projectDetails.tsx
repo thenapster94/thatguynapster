@@ -13,7 +13,7 @@ export const ProjectDetails = ({ project }: { project: any }) => {
         {project.skills.map((skill: string, i: number) => (
           <span
             key={i}
-            className="py-2 px-3 bg-gray w-max justify-center items-center rounded-md"
+            className="py-2 px-3 bg-dark w-max justify-center items-center rounded-md"
           >
             {skill}
           </span>
@@ -22,7 +22,7 @@ export const ProjectDetails = ({ project }: { project: any }) => {
       <a
         href={project.link}
         target="_blank"
-        className="py-2 px-3 border border-gray text-black w-max justify-center items-center rounded-md capitalize"
+        className="py-2 px-3 border border-gray text-dark w-max justify-center items-center rounded-md capitalize"
       >
         view project
       </a>

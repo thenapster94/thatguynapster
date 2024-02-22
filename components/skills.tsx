@@ -1,3 +1,5 @@
+import { classNames } from "@/libs";
+import Image from "next/image";
 import React from "react";
 
 export const Skills = ({
@@ -21,11 +23,13 @@ export const Skills = ({
 const Skill = ({ name, image }: { name: string; image: string }) => {
   return (
     <div className="flex flex-col gap-2 items-center justify-center">
-      <img
-        className="
-      w-full invert"
-        src={image}
+      <Image
+        className={classNames("invert")}
+        width={70}
+        height={70}
+        loading="lazy"
         alt={name}
+        src={image}
       />
       <p className="text-dark text-base font-semibold text-center">{name}</p>
     </div>

@@ -31,7 +31,7 @@ export const PreviewImage = ({
   return (
     <div
       className={classNames(
-        "mix-blend-luminosity hidden lg:flex",
+        "mix-blend-luminosity hidden lg:flex w-full",
         slant ? (slantDirection === "left" ? "slant-left" : "slant-right") : "",
         "relative"
       )}

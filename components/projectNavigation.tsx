@@ -15,13 +15,13 @@ export const ProjectNavigationItem = ({
     className="flex flex-col w-full justify-end min-h-[30px] cursor-pointer"
     onClick={() => setCurrentProject(index)}
   >
-    <p className="text-black font-semibold truncate">
+    <p className="text-dark font-semibold truncate">
       {currentProject === index && name}
     </p>
     <div
       className={classNames(
         "h-1.5 w-full",
-        currentProject === index ? "bg-black" : "bg-[#C4C4C4]"
+        currentProject === index ? "bg-dark" : "bg-[#C4C4C4]"
       )}
     ></div>
   </div>
