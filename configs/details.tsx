@@ -109,7 +109,7 @@ export const skills = [
   },
   {
     name: "TypeScript",
-    image: "/img/tech/typeScript.png",
+    image: "/img/tech/typescript.png",
   },
   {
     name: "Wordpress",
@@ -132,7 +132,7 @@ export const projects: projectProps[] = [
   {
     name: "Swoove Agency",
     description:
-      "An inquisitive Computer Science Engineering student, skilled in leadership, seeking to leverage solid development skills with focus on collaboration, communication and passion. An inquisitive Computer Science Engineering student, skilled in leadership, seeking to leverage solid development skills with focus on collaboration, communication and passion.",
+      "The Swoove Agency Panel simplifies the management of delivery operations for agencies. It offers easy-to-use interfaces for overseeing drivers, vehicles, and trips, enhancing efficiency. With beginner-friendly code, it promotes smooth collaboration among developers, ensuring a hassle-free experience.",
     images: [
       "/img/projects/swoove-agency/1.png",
       "/img/projects/swoove-agency/2.png",
@@ -143,7 +143,8 @@ export const projects: projectProps[] = [
   },
   {
     name: "Swoove Business",
-    description: "",
+    description:
+      "The Business Admin Panel, crafted for businesses of all sizes, simplifies delivery management. As the developer behind this project, I created an intuitive admin panel that facilitates easy control over deliveries. Collaborating closely with the backend team, I contributed to implementing essential functionalities and routes, ensuring a seamless experience for businesses navigating their delivery operations.",
     images: [
       "/img/projects/swoove-business/1.png",
       "/img/projects/swoove-business/2.png",
@@ -154,7 +155,8 @@ export const projects: projectProps[] = [
   },
   {
     name: "GML Website",
-    description: "",
+    description:
+      "The GML Website is a responsive and cross-browser compatible platform I developed, focusing on web standards and accessibility for optimal performance. Collaborating closely with product owners, designers, and stakeholders, I ensured a smooth development process. Additionally, I implemented reusable components to streamline future projects, making maintenance effortless. Additionally, I integrated front-end code with server-side code to implement dynamic pages, enhancing the website's functionality and interactivity.",
     images: [
       "/img/projects/gml-website/1.png",
       "/img/projects/gml-website/2.png",
@@ -165,7 +167,8 @@ export const projects: projectProps[] = [
   },
   {
     name: "GML Admin",
-    description: "",
+    description:
+      "The GML Admin Panel, developed with a focus on responsiveness and cross-browser compatibility, adheres to strict web standards and accessibility guidelines for optimal performance. I integrated seamlessly with back-end developers to bring user interface elements to life. Additionally, I designed reusable components that ensure future projects can be undertaken with minimal effort, enhancing efficiency and scalability.",
     images: [
       "/img/projects/gml-admin/1.png",
       "/img/projects/gml-admin/2.png",
@@ -176,7 +179,8 @@ export const projects: projectProps[] = [
   },
   {
     name: "Brolly",
-    description: "",
+    description:
+      "At Brolly, I brought creative designs to life by converting them into a fully functional website. My focus was on seamlessly integrating design elements and optimizing user interfaces to provide an exceptional user experience.",
     images: ["/img/projects/brolly.png"],
     skills: ["Next.js", "Tailwind", "TypeScript", "Git"],
     link: "https://www.brolly.africa/",

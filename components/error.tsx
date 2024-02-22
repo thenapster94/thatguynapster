@@ -36,6 +36,5 @@ export function Error({
     );
   }
 
-  // eslint-disable-next-line
   return <></>;
 }

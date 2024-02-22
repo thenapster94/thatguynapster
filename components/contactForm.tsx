@@ -6,7 +6,7 @@ import React from "react";
 import { Button, Group, Input } from ".";
 import { schema } from "@/libs";
 
-const ContactForm = () => {
+export const ContactForm = () => {
   interface FormData {
     name: string;
     email: string;
@@ -93,5 +93,3 @@ const ContactForm = () => {
     </Formik>
   );
 };
-
-export default ContactForm;
