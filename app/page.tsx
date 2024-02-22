@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 
 import {
+  ContactForm,
   Navbar,
   PreviewImage,
   ProjectDetails,
@@ -19,7 +20,6 @@ import {
   socials,
   summary,
 } from "@/configs";
-import ContactForm from "@/components/contactForm";
 
 export default function Home() {
   const [currentProject, setCurrentProject] = useState<number>(0);
@@ -31,7 +31,7 @@ export default function Home() {
       {/* Hero Section */}
       <div
         id="home"
-        className="flex flex-col h-screen items-start justify-center px-12 lg:px-24 -mt-[7.5rem] gap-10"
+        className="flex flex-col h-screen items-start justify-center px-4 lg:px-24 -mt-[7.5rem] gap-10"
       >
         <div className="flex flex-col gap-4">
           <h1 className="uppercase text-black font-extrabold tracking-[0.19rem] text-outline-white text-6xl lg:text-5xl">
@@ -47,6 +47,7 @@ export default function Home() {
               key={i}
               aria-label={ariaLabel}
               href={link}
+              target="_blank"
               className="w-8 rounded-full bg-gray"
             >
               <div className="p-1.5 text-black">{icon}</div>
@@ -57,7 +58,7 @@ export default function Home() {
 
       {/* About Section */}
       <div
-        className="grid grid-cols-12 h-screen gap-12 items-center px-12 lg:px-24"
+        className="lg:grid lg:grid-cols-12 h-screen gap-12 items-center px-4 lg:px-24"
         id="about"
       >
         <div className="col-start-2 col-span-4">
@@ -82,7 +83,7 @@ export default function Home() {
 
       {/* Skills Section */}
       <div
-        className="grid grid-cols-12 h-screen gap-12 items-center px-12 lg:px-24"
+        className="lg:grid lg:grid-cols-12 min-h-screen gap-12 items-center px-4 lg:px-24"
         id="skills"
       >
         <div className="col-span-12 lg:col-span-7 flex flex-col gap-8 w-full">
@@ -99,7 +100,7 @@ export default function Home() {
 
       {/* Works Section */}
       <div
-        className="grid grid-cols-12 h-screen gap-12 items-center px-12 lg:px-24"
+        className="lg:grid lg:grid-cols-12 h-screen gap-12 items-center px-4 lg:px-24"
         id="works"
       >
         <div className="col-start-2 col-span-4">
@@ -112,7 +113,7 @@ export default function Home() {
         <div className="col-span-12 lg:col-span-7 flex flex-col gap-8 w-full">
           <h2 className="text-accent text-3xl font-bold capitalize">works</h2>
           <ProjectDetails project={projects[currentProject]} />
-          <div className="flex gap-2 justify-between items-end w-10/12">
+          <div className="flex gap-2 justify-between items-end">
             {projects.map(({ name }, i) => (
               <ProjectNavigationItem
                 key={i}
@@ -128,7 +129,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <div
-        className="bg-[url('/img/contact-pattern-yellow.png')] h- p-20"
+        className="bg-[url('/img/contact-pattern-yellow.png')] h- px-4 py-20 lg:p-20"
         id="contact"
       >
         <div className="p-8 bg-white flex items-center gap-16">
@@ -151,6 +152,7 @@ export default function Home() {
               <Link
                 key={i}
                 aria-label={ariaLabel}
+                target="_blank"
                 href={link}
                 className="w-8 rounded-full bg-gray"
               >

@@ -36,7 +36,10 @@ export function Group({
   ...props
 }: GroupProps) {
   return (
-    <StyledGroup className={classNames(wrapperClassName)} {...props}>
+    <StyledGroup
+      className={classNames(`min-h-6 ${wrapperClassName}`)}
+      {...props}
+    >
       {label && (
         <label
           htmlFor={name}
@@ -49,15 +52,15 @@ export function Group({
           {required && <span className="text-danger-main text-error">*</span>}
         </label>
       )}
-      <StyledContainer
-        disabled={disabled}
+      <div
         className={classNames(
           "rounded-md",
           containerPlacementClass ?? "flex gap-2 items-center",
           "transition ease-in-out duration-150",
           "border border-black",
           "focus-within:border-primary",
-          disabled && "bg-neutral-50",
+          "min-h-12",
+          disabled ? "bg-neutral-50 pointer-events-none" : "bg-white",
           containerClassName
         )}
       >
@@ -70,7 +73,7 @@ export function Group({
             )}
           </>
         )}
-      </StyledContainer>
+      </div>
       <Error
         className={classNames(`field-error`, errorClassName)}
         {...{ name, error, withFormik }}
@@ -82,18 +85,8 @@ export function Group({
 /**
  * styles
  */
-const StyledContainer = styled.div<{
-  disabled?: boolean;
-}>`
-  min-height: 3rem;
-  background-color: ${({ disabled }) =>
-    disabled ? "var(--color-neutral-50)" : "#fff"};
-  ${({ disabled }) => disabled && `pointer-events: none;`};
-`;
 
 const StyledGroup = styled.div`
-  margin-bottom: 1.5rem;
-
   &:has(small.field-error) {
     & > div {
       border-color: rgba(var(--color-red-600-rgb), 1);

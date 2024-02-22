@@ -6,10 +6,10 @@ export const ProjectDetails = ({ project }: { project: any }) => {
       <h3 className="text-accent text-2xl font-semibold capitalize">
         {project.name}
       </h3>
-      <p className="lg:w-10/12 text-3xl text-dark font-light text-outline-white text-outline-thin line-clamp-4">
+      <p className="lg:w-10/12 text-3xl text-dark font-light text-outline-white text-outline-thin line-clamp-">
         {project.description}
       </p>
-      <div className="flex gap-4">
+      <div className="flex flex-wrap gap-4">
         {project.skills.map((skill: string, i: number) => (
           <span
             key={i}

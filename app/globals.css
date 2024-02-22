@@ -62,7 +62,7 @@ body {
 
 .hex-grid {
   display: flex;
-  --s: 100px;
+  --s: 70px;
   --m: 24px;
   --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
 }
