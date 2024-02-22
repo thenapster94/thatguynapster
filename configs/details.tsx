@@ -144,7 +144,7 @@ export const projects: projectProps[] = [
   {
     name: "Swoove Business",
     description:
-      "The Business Admin Panel, crafted for businesses of all sizes, simplifies delivery management. As the developer behind this project, I created an intuitive admin panel that facilitates easy control over deliveries. Collaborating closely with the backend team, I contributed to implementing essential functionalities and routes, ensuring a seamless experience for businesses navigating their delivery operations.",
+      "The Swoove Business Panel, crafted for businesses of all sizes, simplifies delivery management. As the developer behind this project, I created an intuitive admin panel that facilitates easy control over deliveries. Collaborating closely with the backend team, I contributed to implementing essential functionalities and routes, ensuring a seamless experience for businesses navigating their delivery operations.",
     images: [
       "/img/projects/swoove-business/1.png",
       "/img/projects/swoove-business/2.png",
@@ -156,7 +156,7 @@ export const projects: projectProps[] = [
   {
     name: "GML Website",
     description:
-      "The GML Website is a responsive and cross-browser compatible platform I developed, focusing on web standards and accessibility for optimal performance. Collaborating closely with product owners, designers, and stakeholders, I ensured a smooth development process. Additionally, I implemented reusable components to streamline future projects, making maintenance effortless. Additionally, I integrated front-end code with server-side code to implement dynamic pages, enhancing the website's functionality and interactivity.",
+      "The GML Website is a responsive and cross-browser compatible platform I developed, focusing on web standards and accessibility for optimal performance. Collaborating closely with product owners, designers, and stakeholders, I ensured a smooth development process. Additionally, I integrated front-end code with server-side code to implement dynamic pages, enhancing the website's functionality and interactivity.",
     images: [
       "/img/projects/gml-website/1.png",
       "/img/projects/gml-website/2.png",
