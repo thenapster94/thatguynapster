@@ -34,10 +34,10 @@ export default function Home() {
         className="flex flex-col h-screen items-start justify-center px-4 lg:px-24 -mt-[7.5rem] gap-10"
       >
         <div className="flex flex-col gap-4">
-          <h1 className="uppercase text-black font-extrabold tracking-[0.19rem] text-outline-white text-6xl lg:text-5xl">
+          <h1 className="uppercase text-dark font-extrabold tracking-[0.19rem] text-outline-white text-6xl lg:text-5xl">
             {name}
           </h1>
-          <p className="capitalize text-white text-4xl lg:text-4xl font-semibold text-outline-black">
+          <p className="capitalize text-white text-4xl lg:text-4xl font-semibold text-outline-dark">
             {role}
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function Home() {
               target="_blank"
               className="w-8 rounded-full bg-gray"
             >
-              <div className="p-1.5 text-black">{icon}</div>
+              <div className="p-1.5 text-dark">{icon}</div>
             </Link>
           ))}
         </div>
@@ -80,6 +80,10 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      {/* <div className="flex gap-12 items-center px-4 lg:px-24" id="about">
+        <PreviewImage images={["/img/napster.jpg"]} />
+      </div> */}
 
       {/* Skills Section */}
       <div
@@ -129,22 +133,22 @@ export default function Home() {
 
       {/* Contact Section */}
       <div
-        className="bg-[url('/img/contact-pattern-yellow.png')] h- px-4 py-20 lg:p-20"
+        className="bg-[url('/img/contact-pattern-yellow.png')] px-4 py-20 lg:p-20"
         id="contact"
       >
         <div className="p-8 bg-white flex items-center gap-16">
-          <h1 className="hidden lg:block text-[38px] font-semibold text-black">
+          <h1 className="hidden lg:block text-[38px] font-semibold text-dark">
             Drop me a line. <br /> I would like to hear from you.
           </h1>
           <div className="flex flex-col gap-8 w-full">
-            <h2 className="text-accent text-3xl font-semibold">Get in Touch</h2>
+            <h2 className="text-dark text-3xl font-semibold">Get in Touch</h2>
             <ContactForm />
           </div>
         </div>
       </div>
 
       {/* Footer Section */}
-      <div className="bg-black bg-[url('/img/splatter-small-white.png')] bg-no-repeat bg-right py-8">
+      <div className="bg-dark bg-[url('/img/splatter-small-white.png')] bg-no-repeat bg-right py-8">
         <div className="flex flex-col items-center gap-8">
           <p className="text-lg font-semibold">thatGuyNapster</p>
           <div className="flex gap-4">
@@ -156,7 +160,7 @@ export default function Home() {
                 href={link}
                 className="w-8 rounded-full bg-gray"
               >
-                <div className="p-1.5 text-black">{icon}</div>
+                <div className="p-1.5 text-dark">{icon}</div>
               </Link>
             ))}
           </div>

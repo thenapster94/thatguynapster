@@ -57,7 +57,7 @@ export function Group({
           "rounded-md",
           containerPlacementClass ?? "flex gap-2 items-center",
           "transition ease-in-out duration-150",
-          "border border-black",
+          "border border-dark",
           "focus-within:border-primary",
           "min-h-12",
           disabled ? "bg-neutral-50 pointer-events-none" : "bg-white",

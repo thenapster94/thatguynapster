@@ -54,7 +54,7 @@ export const ContactForm = () => {
       {({ values, isSubmitting }) => (
         <Form>
           <div className="flex flex-col gap-6 w-full">
-            <Group className="w-full !mb-0 text-black" name="name">
+            <Group className="w-full !mb-0 text-dark" name="name">
               <Input
                 as="input"
                 name="name"
@@ -62,7 +62,7 @@ export const ContactForm = () => {
                 placeholder="Name"
               />
             </Group>
-            <Group className="w-full !mb-0 text-black" name="email">
+            <Group className="w-full !mb-0 text-dark" name="email">
               <Input
                 as="input"
                 type="email"
@@ -71,7 +71,7 @@ export const ContactForm = () => {
                 placeholder="Email"
               />
             </Group>
-            <Group className="w-full !mb-0 text-black" name="message">
+            <Group className="w-full !mb-0 text-dark" name="message">
               <Input
                 as="textarea"
                 name="message"
@@ -82,7 +82,7 @@ export const ContactForm = () => {
             </Group>
             <Button
               type="submit"
-              className="bg-black w-max"
+              className="bg-dark w-max"
               {...{ isSubmitting }}
             >
               Send Message
