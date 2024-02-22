@@ -1,27 +1,33 @@
 "use client";
 
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import React, { useState } from "react";
-
-import { links } from "@/configs/details";
 import { classNames, scrollToDiv } from "@/libs";
+import { links } from "@/configs";
 
-const Navbar = () => {
-  const [activeLink, setActiveLink] = useState<string>("home");
+export const Navbar = () => {
+  const router = useRouter();
+  const [activeLink, setActiveLink] = useState("home");
+
+  useEffect(() => {
+    const section = window.location.hash;
+    const hash = section.split("#")[1];
+    const activeSection = hash && hash.length ? hash : "home";
+    setActiveLink(activeSection);
+    scrollToDiv(activeSection);
+  }, []);
 
   return (
-    <header className="sticky top-0 md:px-24 pt-2 glass mix-blend-difference">
-      <nav className="hidden md:flex gap-16 items-center">
+    <header className="hidden lg:block sticky top-0 lg:px-24 pt-2 glass mix-blend- z-50">
+      <nav className="flex gap-16 items-center">
         {links.map((link, i) => (
           <NavItem
             key={i}
             active={activeLink === link.text}
             text={link.text}
             url={link.url}
-            onClick={(navLink: string) => {
-              setActiveLink(navLink);
-              scrollToDiv(navLink.length ? navLink : "home");
-            }}
+            setActiveLink={setActiveLink}
           />
         ))}
       </nav>
@@ -33,18 +39,24 @@ const NavItem = ({
   text,
   url,
   active,
-  onClick,
+  setActiveLink,
 }: {
   text: string;
   url: string;
   active: boolean;
-  onClick: (link: string) => void;
+  setActiveLink: React.Dispatch<React.SetStateAction<string>>;
 }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    setActiveLink(text);
+    scrollToDiv(text);
+    router.push(url);
+  };
+
   return (
     <div
-      onClick={() => {
-        onClick(text);
-      }}
+      onClick={handleClick}
       className={classNames(
         "bg-center bg-no-repeat bg-contain",
         "flex items-center pb-2",
@@ -58,12 +70,13 @@ const NavItem = ({
     >
       <Link
         href={url}
-        className={classNames(active ? "text-accent" : "text-white")}
+        className={classNames(
+          active ? "text-accent" : "text-white",
+          "scroll-smooth"
+        )}
       >
         {text}
       </Link>
     </div>
   );
 };
-
-export default Navbar;

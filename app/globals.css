@@ -18,9 +18,12 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
-  scroll-behavior: smooth;
 }
 
 @layer utilities {
@@ -29,42 +32,63 @@ body {
   }
 }
 
-.hero-splatter:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  background: url(/img/splatter.png) 0 no-repeat;
-  overflow: hidden;
-}
-
-.about-splatter:before {
-  content: "";
-  position: absolute;
-  width: 75%;
-  height: 100%;
-  top: 65%;
-  left: -29.5%;
-  z-index: -1;
-  background: url(/img/splatter.png) 0 0 no-repeat;
-  transform: rotate(21.995deg);
-  background-size: contain;
-  overflow: hidden;
-}
-
 .glass {
   /* From https://css.glass */
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(13px);
-  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .text-outline-white {
   -webkit-text-stroke: 1.5px white;
 }
 
+.text-outline-thin {
+  -webkit-text-stroke-width: 0.2px;
+}
+
 .text-outline-black {
   -webkit-text-stroke: 0.75px black;
+}
+
+.slant-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
+.slant-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+}
+
+.hex-grid {
+  display: flex;
+  --s: 100px;
+  --m: 24px;
+  --f: calc(1.732 * var(--s) + 4 * var(--m) - 1px);
+}
+
+.hex-grid__container {
+  font-size: 0;
+}
+
+.hex-grid__container div {
+  width: var(--s);
+  margin: var(--m);
+  height: calc(var(--s) * 1.1547);
+  display: inline-block;
+  font-size: initial;
+  /* clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%); */
+  /* background: red; */
+  margin-bottom: calc(var(--m) - var(--s) * 0.2885);
+}
+
+.hex-grid__container::before {
+  content: "";
+  width: calc(var(--s) / 2 + var(--m));
+  float: left;
+  height: 120%;
+  shape-outside: repeating-linear-gradient(
+    #0000 0 calc(var(--f) - 3px),
+    #000 0 var(--f)
+  );
 }
