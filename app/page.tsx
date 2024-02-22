@@ -81,10 +81,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <div className="flex gap-12 items-center px-4 lg:px-24" id="about">
-        <PreviewImage images={["/img/napster.jpg"]} />
-      </div> */}
-
       {/* Skills Section */}
       <div
         className="lg:grid lg:grid-cols-12 min-h-screen gap-12 items-center px-4 lg:px-24"
