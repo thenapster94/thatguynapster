@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, forwardRef } from "react";
-import styled from "styled-components";
 import { Spinner } from "./icons";
+import { classNames } from "@/libs";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isSubmitting?: boolean;
@@ -19,39 +19,23 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     })();
 
     return (
-      <StyledButton ref={ref} {...{ disabled, ...props }}>
+      <button
+        ref={ref}
+        {...{ disabled, ...props }}
+        className={classNames(
+          "active:shadow-[inset_0_0_100px_100px_rgba(0,0,0,0.1)]",
+          "flex gap-2 items-center justify-center",
+          "text-sm font-medium whitespace-nowrap",
+          "disabled:pointer-events-none",
+          "outline-0 select-none",
+          "rounded-lg",
+          "py-4 px-6",
+          props.className
+        )}
+      >
         {isSubmitting ? <Spinner /> : ""}
         <div className="flex items-center gap-2">{children}</div>
-      </StyledButton>
+      </button>
     );
   }
 );
-
-/**
- * styles
- */
-const StyledButton = styled.button`
-  outline: 0;
-  gap: 0.5rem;
-  height: 3rem;
-  display: flex;
-  user-select: none;
-  font-weight: 500;
-  white-space: nowrap;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  font-size: 0.875rem;
-  border-radius: 0.5rem;
-  justify-content: center;
-
-  border-width: 1px;
-  border-color: transparent;
-
-  &:disabled {
-    pointer-events: none;
-  }
-
-  &:active {
-    box-shadow: inset 0 0 100px 100px rgba(0, 0, 0, 0.1);
-  }
-`;

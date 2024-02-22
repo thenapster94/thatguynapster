@@ -1,15 +1,9 @@
 "use client";
 
-import { Form, Formik } from "formik";
 import { useState } from "react";
 import Link from "next/link";
-import { object } from "yup";
 
-import { schema } from "@/libs";
 import {
-  Button,
-  Group,
-  Input,
   Navbar,
   PreviewImage,
   ProjectDetails,
@@ -25,6 +19,7 @@ import {
   socials,
   summary,
 } from "@/configs";
+import ContactForm from "@/components/contactForm";
 
 export default function Home() {
   const [currentProject, setCurrentProject] = useState<number>(0);
@@ -142,51 +137,7 @@ export default function Home() {
           </h1>
           <div className="flex flex-col gap-8 w-full">
             <h2 className="text-accent text-3xl font-semibold">Get in Touch</h2>
-            <Formik
-              validateOnMount
-              enableReinitialize
-              validationSchema={object({
-                name: schema.requireFullName("Full name"),
-                email: schema.requireEmail("Email"),
-                message: schema.requireString("Message"),
-              })}
-              initialValues={{ name: "", email: "", message: "" }}
-              onSubmit={(values, { setSubmitting }) => {}}
-            >
-              {({ values, isSubmitting }) => (
-                <Form>
-                  <div className="flex flex-col gap-6 w-full">
-                    <Group className="w-full !mb-0 text-black" name="name">
-                      <Input
-                        as="input"
-                        name="name"
-                        value={values.name}
-                        placeholder="Name"
-                      />
-                    </Group>
-                    <Group className="w-full !mb-0 text-black" name="email">
-                      <Input
-                        as="input"
-                        type="email"
-                        name="email"
-                        value={values.email}
-                        placeholder="Email"
-                      />
-                    </Group>
-                    <Group className="w-full !mb-0 text-black" name="message">
-                      <Input
-                        as="textarea"
-                        name="message"
-                        value={values.message}
-                        placeholder="Message"
-                        rows={5}
-                      />
-                    </Group>
-                    <Button className="bg-black w-max">Send Message</Button>
-                  </div>
-                </Form>
-              )}
-            </Formik>
+            <ContactForm />
           </div>
         </div>
       </div>

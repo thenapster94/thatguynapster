@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, League_Spartan } from "next/font/google";
+import { League_Spartan } from "next/font/google";
 
 import { config } from "@/configs";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const spartan = League_Spartan({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={` bg-[url('/img/page-background.webp')]  bg-top sm:bg-top bg-no-repeat`}
       >
+        <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
         {children}
       </body>
     </html>

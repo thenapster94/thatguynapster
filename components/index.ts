@@ -8,3 +8,4 @@ export * from "./input";
 export * from "./projectDetails";
 export * from "./projectNavigation";
 export * from "./skills";
+export * from "./contactForm";
