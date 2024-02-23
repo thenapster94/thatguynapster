@@ -8,7 +8,7 @@ export const name = "Andrew Osei-Wusu (Napster)";
 
 export const role = "Engineer + Full Stack Developer";
 export const summary =
-  "A highly-motivated individual with a desire to take on new challenges. Strong worth ethic, adaptability and exceptional interpersonal skills. Adept at working effectively unsupervised and quickly mastering new skills.";
+  "A highly-motivated individual with a desire to take on new challenges. Strong work ethic, adaptability and exceptional interpersonal skills. Adept at working effectively unsupervised and quickly mastering new skills.";
 export const summary2 =
   "Full stack developer focused on creating Web and Mobile applications. Strong worth ethic, adaptability and exceptional interpersonal skills I like projects that solve real problems.";
 
