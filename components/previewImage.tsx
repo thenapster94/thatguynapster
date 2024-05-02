@@ -59,7 +59,7 @@ export const PreviewImage = ({
       <Button
         className={classNames(
           activeStyles,
-          "-left-4 transition rounded-l-full",
+          "-left-4 transition rounded-r-full",
           {
             [inactiveStyles]: slideConfig.isBeginning,
             "hover:bg-primary hover:text-neutral-10 text-neutral-50 opacity-100":
@@ -79,7 +79,7 @@ export const PreviewImage = ({
       <Button
         className={classNames(
           activeStyles,
-          "-right-4 rounded-r-full transition",
+          "-right-4 rounded-l-full transition",
           {
             [inactiveStyles]: slideConfig.isEnd,
             "hover:bg-primary hover:text-neutral-10 text-neutral-50 opacity-100":
