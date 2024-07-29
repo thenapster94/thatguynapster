@@ -34,6 +34,7 @@ export const links = [
     url: "#contact",
   },
 ];
+
 export const socials = [
   {
     icon: <GithubIcon className="w-4 h-4" />,
@@ -130,6 +131,18 @@ export interface projectProps {
 }
 export const projects: projectProps[] = [
   {
+    name: "HX Engineering Online Store",
+    description:
+      "HX Engineering online store is a project built to aid an SME have an online presence for their business. Implementing Next.js, Typescript, TailwindCSS, and MongoDB, a robust website and admin panel was provided to facilitate a seamless online experience for the clients of the HX Engineering",
+    images: [
+      "/img/projects/hx/1.jpg",
+      "/img/projects/hx/2.jpg",
+      "/img/projects/hx/3.jpg",
+    ],
+    skills: ["Next.js", "Tailwind", "node.js", "TypeScript", "Git"],
+    link: "https://hxcompanies.com",
+  },
+  {
     name: "Swoove Agency",
     description:
       "The Swoove Agency Panel simplifies the management of delivery operations for agencies. It offers easy-to-use interfaces for overseeing drivers, vehicles, and trips, enhancing efficiency. With beginner-friendly code, it promotes smooth collaboration among developers, ensuring a hassle-free experience.",
@@ -139,7 +152,7 @@ export const projects: projectProps[] = [
       "/img/projects/swoove-agency/3.png",
     ],
     skills: ["Next.js", "Tailwind", "node.js", "TypeScript", "Git"],
-    link: "https://panel.swoovedelivery.com/",
+    link: "https://panel.swoovedelivery.com",
   },
   {
     name: "Swoove Business",
@@ -151,7 +164,7 @@ export const projects: projectProps[] = [
       "/img/projects/swoove-business/3.png",
     ],
     skills: ["Next.js", "Tailwind", "node.js", "TypeScript", "Git"],
-    link: "https://business.swoove.delivery/",
+    link: "https://business.swoove.delivery",
   },
   {
     name: "GML Website",
@@ -163,7 +176,7 @@ export const projects: projectProps[] = [
       "/img/projects/gml-website/3.png",
     ],
     skills: ["Next.js", "Tailwind", "TypeScript", "Git"],
-    link: "https://ghanamusiclive.com/",
+    link: "https://ghanamusiclive.com",
   },
   {
     name: "GML Admin",
@@ -175,7 +188,7 @@ export const projects: projectProps[] = [
       "/img/projects/gml-admin/3.png",
     ],
     skills: ["Next.js", "Tailwind", "TypeScript", "Git"],
-    link: "https://admin.themusigaapp.com/",
+    link: "https://admin.themusigaapp.com",
   },
   {
     name: "Brolly",
@@ -183,13 +196,13 @@ export const projects: projectProps[] = [
       "At Brolly, I brought creative designs to life by converting them into a fully functional website. My focus was on seamlessly integrating design elements and optimizing user interfaces to provide an exceptional user experience.",
     images: ["/img/projects/brolly.png"],
     skills: ["Next.js", "Tailwind", "TypeScript", "Git"],
-    link: "https://www.brolly.africa/",
+    link: "https://www.brolly.africa",
   },
   {
     name: "CuriaShops",
     description: "",
     images: ["/img/projects/curiashops.jpg"],
     skills: ["Next.js", "Bootstrap", "JavaScript", "Git"],
-    link: "https://curiashops.com/",
+    link: "https://curiashops.com",
   },
 ];
